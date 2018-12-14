@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  /*mümkünse Merriweather kullan yoksa default serif fontunu kullan. */
+  /* websafe fonts: neredeyse tüm browserların renderlayabileceği fontları gösterir. */
+  /* Eğer bütün kullanıcıların o fontu görmesini istiyorsak (onlarda yüklü olmasa bile) font embedding kullanmalıyız */
+  /* fonts.google.com */
+  /* sans serif : düz  serif: harflerin uçlarında çizgiler olan */
+  /* monospace bütün harflerin widthlerinin eşit olduğu */
+  /* genellikle default serif : times font default sans serif : arial */
+}
+/* mesela body de font size 2 em olsun h2 de 5 em olsun kalıtım olarak 2 em 5 em ile toplanır h2 7 em oluyor.
+  pixel olsaydı toplanmazdı. overwrite edilip h2 nin içindeki değer olurdu. em yerine rem yazsaydık sadece o değer
+  geçerli olurdu.*/
+h1 {
+  line-height: 1.3;
+  color: #66BFBF;
+  font-size: 562.5%; /* 100% = 16px yüzde olarak yazmamızın sebebi browserda zoom yapınca yazının küçülüp büyümesi*/
+  margin: 50px auto 0 auto;
+  /* width verince text-align: center olmasına rağmen ortalama yapmadı. */
+  /* margini kullanalarak ortaladık  top bottom 0 left right auto*/
+  font-family: 'Gamja Flower', cursive;
+  font-weight: normal;
+}
+
+h3 {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  /* 1em = 16px 2 em = 32 px = 100% */
+}
+
+.footer-link {
+  margin: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #11999e;
+}
+
+.contact-me {
+  padding-bottom: 50px;
+  margin-bottom: 0;
+}
+
+.footer-copyright {
+  margin-top: 50px;
+  color: #EAF6F6;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  color: #66BFBF;
+}
+
+hr {
+  border-color: #e8e2db;
+  margin: 100px auto 100px auto;
+  width: 4%;
+  border-style: dotted;
+  border-width: 6px 0 0 0;
+}
+
+.butn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto;
+  text-align: justify;
+  line-height: 2;
+}
+
+.profile-photo {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.top-container {
+  background-color: #eaf6f6;
+  padding-top: 100px;
+  position: relative;
+
+}
+
+.middle-container {
+  padding-top: 20px;
+}
+
+.bottom-container {
+  margin-top: 100px;
+  background-color: #66BFBF;
+  height: 150px;
+  padding-top: 50px;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 50px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 300px;
+  bottom: 300px;
+}
+
+.span-prog {
+  text-decoration: underline;
+}
+
+.html-image {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.computer-image {
+  width: 25%;
+  border-radius: 100%;
+  float: right;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.intro-p {
+  color: #40514e;
+}
+/*
+.code-skill-desc {
+  clear: left;
+}
+
+clear anti float gibi birşeydir. clear left dedigimiz zaman. öğenin solunda float edilmiş bir eleman varsa bu öğeyi aşağıya
+çekip, öğenin float edilen nesnenin yanında değil altında yer almasını sağlar.
+floatı positioning için kullanma. bir öğeyi sarmasını istediğimizde kullan.
+/*
+CSS BOX MODEL ÖNEMLİ MARGİN BORDER PADDİNG CONTENT
+Bazı taglar kendiliğinden display özelliği blocktur (h1,p,div,ol,ul,li,form)
+Bazı taglar kendiliğinden display özelliği inlinedir. (a,img,span)
+position -->
+static = html elementlerin hepsinin positionu default olarak statictir
+relative =  positionu relative yapıp left: 30px; dersek önceki pozisyonundan soldan 30 px kaydır demek.
+top 20px; dersek üstten 20px kaydır demektir.
+relative olarak elementin yerini değiştirirsek diğer elementlerin yeri asla etkilenmez. Üzerine geçer diğer elementin.
+Margin kullanırsak diğer elementler ile çakışırsa onlarıda kendisiyle beraber sürükleyip yerini değiştirir.
+
+relative positioning elementin ilk yerine bağlıdır.
+absolute positioning elementin parentine bağlıdır.
+relativede diğer elementlerin yeri etkilenmiyordu. Ama absolute positionda etkilenir.
+absolute positioning de parent her zaman body olmayabilir. positioningi relative olan bir div içerisinde de olabilir.
+positioning i fixed yaptığımızda mesela top:0 dedik. Sayfayı aşağı doğru scroll ettiğimiz de bile o element sayfanın en üstüne
+yapışır ve aşağıyada gelir.
+bir öğeyi absolute yaotığımız zaman o öğe html flowundan çıkar.
+
+inline taglarda width değiştiremezsin. Eğer hem inline olup hemde genişliğini değiştirmek istiyorsak
+inline-block kullanırız. img ler inline-block gibi davranır. genişliğini değiştirebiliriz. display none dediğimizde
+o element yok olur. eğer elementi yok etmek değilde görünmez yapmak istersek visibility özelliğini hidden yapariz.
+
+span ise cümlelerin içinde belirli bölgeleri belirleyip değiştirmek için kullanılır.
+Mesela a programmer kısmında pro kısmını altı çizili yapmak istersek proyu span içine alıp css de değiştiririz.
+h1 {
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+}
+*/
+/* bütün sidelar 0 px top left right bottom */
+/* Browserın taglara uyguladığı default bir css kodu vardır. body ye 8px margin, h1 e top ve bottom margin gibi.
+  buna user agent stylesheet denir. */
